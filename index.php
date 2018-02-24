@@ -10,3 +10,5 @@
 
 	?>
 <?php get_footer(); ?>
+
+log
