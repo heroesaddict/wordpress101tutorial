@@ -4,6 +4,11 @@
 	<div class="col-xs-12 col-sm-8">
 		<div class="row text-center">
 		<?php 
+		/*override default value in Reading Setting/Blog pages show at most*/
+		$currentPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		echo $currentPage;
+		$args = array('posts_per_page'=>3,'paged'=>$currentPage );
+		query_posts( $args ); 
 		if(have_posts()): $i =0;
 			while(have_posts()): the_post(); ?>
 				<?php 
@@ -21,8 +26,15 @@
 							<small><?php the_category(' '); ?></small>
 						</div>
 					</div>
-			<?php $i++; endwhile;
-		endif;
+			<?php $i++; endwhile; ?>
+			<div class="col-xs-6" text-left>
+				<?php next_posts_link( '<< Older Posts' ); ?>
+			</div>
+			<div class="col-xs-6" text-right>
+				<?php previous_posts_link( 'Newer Posts>>' ); ?>
+			</div>
+		<?php endif; 
+		wp_reset_query();
 		?>
 		</div>
 	</div>
