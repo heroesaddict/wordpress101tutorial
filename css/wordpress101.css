@@ -9,6 +9,7 @@ body{
 body {
 	padding: 20px;
 }
+body { padding-top: 50px; }
 
 .carousel {background: #000;}
 .carousel .item {height: 300px; overflow:hidden;}
@@ -16,11 +17,44 @@ body {
 .carousel-caption a{color:#fff;}
 .blog-element {display: block; height: 200px; overflow: hidden; background-position: center center; background-repeat: no-repeat; background-size: cover;}
 .blog-element a {color:#fff; text-shadow: 0 1px 3px rgba(0,0,0,.5) }
-
+/*
 .second-row-padding:nth-child(2) {padding-right: 0;}
 .second-row-padding:nth-child(3) {padding-left: 0;}
 
 .third-row-padding:nth-child(4) {padding-right: 0;}
 .third-row-padding:nth-child(5) {padding-left: 0;}
 .third-row-padding:nth-child(5) {padding-right: 0;}
-.third-row-padding:nth-child(6) {padding-left: 0;}
+.third-row-padding:nth-child(6) {padding-left: 0;}*/
+
+.no-margin { margin: 0; }
+.blog-item { padding: 0; }
+
+
+/* header search form */
+.search-form-container {display: none; 
+	position: fixed; 
+	top: 50px; 
+	left: 0; 
+	right: 0; 
+	background-color: 
+	rgba(0,0,0,.35); 
+	padding: 20px; 
+	z-index: 2;
+}
+
+.open-search a{ font-size: 0; width: 30px; position: relative; }
+.open-search a:after{
+	display: block;
+	position: absolute; 
+	font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    content: "\e003";
+    font-size: 20px;
+    left: 0;
+    top: 50%;
+    line-height: 1em;
+    margin-top: -0.5em;
+}
+
