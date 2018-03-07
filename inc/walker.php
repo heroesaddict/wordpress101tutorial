@@ -71,6 +71,8 @@ class Walker_Nav_Primary extends Walker_Nav_menu {
 		$output .= apply_filters ( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		
 	}
+
+	echo 'testing';
 	
 /*	
 	function end_el(){ // closing li a span
