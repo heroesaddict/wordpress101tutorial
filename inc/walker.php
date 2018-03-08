@@ -72,7 +72,7 @@ class Walker_Nav_Primary extends Walker_Nav_menu {
 		
 	}
 
-	echo 'testing';
+
 	
 /*	
 	function end_el(){ // closing li a span

@@ -41,12 +41,11 @@ add_theme_support('custom-header');
 add_theme_support('post-thumbnails');
 add_theme_support('post-formats', array('aside', 'image', 'video'));
 add_theme_support('html5',array('search-form'));
+
 /* ===============================
    Sidebar Functions
    ===============================
 */
-
-
 function wordpress101_widget_setup() {
 	
 	register_sidebar(
@@ -85,4 +84,14 @@ add_action( 'widgets_init', 'wordpress101_widget_setup');
 
 require get_template_directory() . '/inc/walker.php';
 
+/* ===============================
+   Head function
+   ===============================
+*/
+
+function wordpress101_remove_version() {
+	return '';
+}
+
+add_filter('the_generator','wordpress101_remove_version');
 
